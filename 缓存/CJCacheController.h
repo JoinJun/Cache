@@ -1,10 +1,14 @@
-# usage
-将 CacheController.h 、CacheController.m 加入工程
+//
+//  CacheController.h
+//  缓存
+//
+//  Created by chenjun on 16/7/18.
+//  Copyright © 2016年 cloudssky. All rights reserved.
+//
 
-在需要缓存的地方导入头文件 CacheController.h 
+#import <Foundation/Foundation.h>
 
-提供方法如下：
-
+@interface CJCacheController : NSObject
 /**
  *  缓存信息
  *
@@ -12,17 +16,17 @@
  *  @param key  关键字
  */
 + (void)cacheWithDict:(NSDictionary *)dict forKey:(NSString *)key;
-
 /**
  *  读取缓存信息
  *
  *  @param key 关键字
  */
 + (NSDictionary *)readCacheWithKey:(NSString *)key;
-
 /**
  *  删除缓存
  *
  *  @param key 关键字
  */
 + (void)delegateCacheWithKey:(NSString *)key;
+
+@end
